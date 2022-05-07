@@ -1,11 +1,12 @@
 
-let animal = {
-    name: "Animal",
+class Animal{
+    constructor(name) {
+        this.name = name
+    }
     move(){
-        alert(this.name + " is moving");
+        alert(this.name + " is moving")
     }
 }
 
-let cat = Object.create(animal);
-cat.name = "Garfield"
+let cat = new Animal("Garfield");
 cat.move()
