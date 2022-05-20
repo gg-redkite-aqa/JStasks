@@ -1,4 +1,5 @@
-let originalName= "Joe";
+
+let originalName = "Joe";
 function checkName(name){
     if(name === originalName){
         alert(`hi ${name}`);
