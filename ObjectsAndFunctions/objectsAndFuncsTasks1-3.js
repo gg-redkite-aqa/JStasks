@@ -1,6 +1,5 @@
-
 let car = {
-    color : "black"
+    color: "black"
 };
 
 car.color = "green";

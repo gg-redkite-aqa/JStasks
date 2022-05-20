@@ -1,6 +1,5 @@
-
-function typeChecker(arg){
-    console.log(typeof(arg))
+function typeChecker(arg) {
+    console.log(typeof (arg))
 }
 
 typeChecker(50)
