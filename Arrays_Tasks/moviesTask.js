@@ -1,3 +1,3 @@
 
-let movies = ["The Avangers", "Inception", "Spider-Man", "Lost and Found"];
-movies.forEach((movie) => console.log(movie))
+let movies = ["The Avengers", "Inception", "Spider-Man", "Lost and Found"];
+movies.forEach(movie => console.log(movie))
