@@ -1,6 +1,7 @@
+let myArray = [10, 20, 30, 40];
 
-let myArray = [10,20,30,40];
-function getIndex(array,number){
+function getIndex(array, number) {
     return array.findIndex(item => item === number)
 }
-console.log(getIndex(myArray,30))
+
+console.log(getIndex(myArray, 30))
