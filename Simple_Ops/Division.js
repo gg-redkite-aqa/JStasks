@@ -1,4 +1,3 @@
-
 let string1 = "this string";
 let someBoolean = false;
 let number1 = 400;

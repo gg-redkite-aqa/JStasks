@@ -1,4 +1,3 @@
-
 let string1 = "this string";
 let someBoolean = true;
 let number1 = 55;
