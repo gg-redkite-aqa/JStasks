@@ -1,3 +1,4 @@
+
 let manufacturers = ["Toyota", "Mercedes-Benz", "Tesla"];
 let strManufacturers = manufacturers.join(",");
 
