@@ -4,7 +4,7 @@ class Animal{
         this.name = name
     }
     move(){
-        alert(this.name + " is moving")
+        console.log(this.name + " is moving")
     }
 }
 
