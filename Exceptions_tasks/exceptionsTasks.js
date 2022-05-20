@@ -1,4 +1,3 @@
-
 try {
     console.log(a);
     let a = 3;
