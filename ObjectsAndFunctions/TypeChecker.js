@@ -1,3 +1,4 @@
+
 function typeChecker(arg){
     console.log(typeof(arg))
 }
