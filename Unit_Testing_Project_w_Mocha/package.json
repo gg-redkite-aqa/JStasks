@@ -1,0 +1,36 @@
+{
+  "name": "unit_testing_project",
+  "version": "1.0.0",
+  "description": "a simple unit testing project using mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GGtester01/JStasks.git"
+  },
+  "keywords": [
+    "mocha",
+    "unit",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GGtester01/JStasks/issues"
+  },
+  "homepage": "https://github.com/GGtester01/JStasks#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.16.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "reporter": "html"
+  }
+}
