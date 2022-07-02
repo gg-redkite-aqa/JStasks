@@ -42,13 +42,13 @@ class HomePage extends AbstractPage{
         return this.submit();
     }
     cratedTitle(){
-        return super.find('//div[@class="wrap"]/descendant::div[@class="info-top"]/h1')
+        return super.find('//body/div[@class="wrap"]/descendant::div[@class="info-top"]/h1')
     }
     highlighter(){
-        return super.find('//div[@class="wrap"]/descendant::div[@class="left"]/a[@class = "btn -small h_800"]')
+        return super.find('//body/div[@class="wrap"]/descendant::div[@class="left"]/a[@class = "btn -small h_800"]')
     }
     cratedCode(){
-        return super.find('//div[@class="wrap"]/descendant::textarea')
+        return super.find('//body/div[@class="wrap"]/descendant::textarea')
     }
 }
 

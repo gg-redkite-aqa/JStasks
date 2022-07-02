@@ -21,7 +21,7 @@ describe('Bring It On',()=>{
         expect(title).to.equal(createdTitle);
         expect(language).to.equal(highlighter);
         expect(text).to.equal(createdCode);
-        console.log("createTitle is: " + createdTitle +'\n'+ ' highlighter is: ' + highlighter + '\n' + 'createdcode is: ' + createdCode)
+        //console.log("createTitle is: " + createdTitle +'\n'+ ' highlighter is: ' + highlighter + '\n' + 'createdcode is: ' + createdCode)
 
     })
     after(()=>{

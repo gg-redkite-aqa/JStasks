@@ -6,24 +6,24 @@ class AbstractPage {
         global.By = By;
         global.Key = Key;
         global.until = until;
-        global.driver = driver;
+        this.driver = driver;
         global.manage = manage;
     }
     newWindow(){
        return driver.switchTo().newWindow('tab');
     }
     open(url) {
-        driver.get(url);
+        this.driver.get(url);
     }
     maxWindow(){
-        driver.manage().window().maximize();
+        this.driver.manage().window().maximize();
     }
     find(xpath){
-        driver.wait(until.elementsLocated(By.xpath(xpath)));
-        return driver.findElement(By.xpath(xpath))
+        this.driver.wait(until.elementsLocated(By.xpath(xpath)));
+        return this.driver.findElement(By.xpath(xpath))
     }
     close() {
-        driver.quit();
+        this.driver.quit();
     }
 }
 
