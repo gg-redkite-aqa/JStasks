@@ -9,13 +9,16 @@ class AbstractPage {
         global.driver = driver;
         global.manage = manage;
     }
-    visit(url) {
+    newWindow(){
+       return driver.switchTo().newWindow('tab');
+    }
+    open(url) {
         driver.get(url);
     }
     maxWindow(){
         driver.manage().window().maximize();
     }
-    findElement(xpath){
+    find(xpath){
         driver.wait(until.elementsLocated(By.xpath(xpath)));
         return driver.findElement(By.xpath(xpath))
     }
