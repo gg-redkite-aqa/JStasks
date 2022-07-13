@@ -4,4 +4,3 @@ mochawesome-report
 coverage
 /.eslintignore
 /.eslintrc.json
-/.mocharc.js
