@@ -1,30 +1,38 @@
-const {Builder, manage, By, Key, until} = require('selenium-webdriver');
-const driver = new Builder().forBrowser('chrome').build();
+require("chromedriver");
+
+const { Builder, manage, until, By } = require("selenium-webdriver");
+const { Options } = require("selenium-webdriver/chrome");
 
 class AbstractPage {
-    constructor() {
-        global.By = By;
-        global.Key = Key;
-        global.until = until;
-        this.driver = driver;
-        global.manage = manage;
-    }
-    newWindow(){
-       return driver.switchTo().newWindow('tab');
-    }
-    open(url) {
-        this.driver.get(url);
-    }
-    maxWindow(){
-        this.driver.manage().window().maximize();
-    }
-    find(xpath){
-        this.driver.wait(until.elementsLocated(By.xpath(xpath)));
-        return this.driver.findElement(By.xpath(xpath))
-    }
-    close() {
-        this.driver.quit();
-    }
-}
+  constructor() {
+    this.driver = AbstractPage.initBrowser();
+    this.manage = manage;
+    this.until = until;
+    this.By = By;
+  }
 
+  static initBrowser() {
+    const chromeOptions = new Options().addArguments("--log-level=3");
+    return new Builder()
+      .forBrowser("chrome")
+      .setChromeOptions(chromeOptions)
+      .build();
+  }
+
+  async open(url) {
+    await this.driver.get(url);
+  }
+
+  findByXpath(xpath) {
+    this.driver.wait(until.elementsLocated(By.xpath(xpath)));
+    return this.driver.findElement(By.xpath(xpath));
+  }
+  maxWindow() {
+    this.driver.manage().window().maximize();
+  }
+
+  async close() {
+    await this.driver.quit();
+  }
+}
 module.exports = AbstractPage;
